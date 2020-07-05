@@ -1,10 +1,18 @@
-# DeblurGAN-v2: Deblurring (Orders-of-Magnitude) Faster and Better
+# Colab-DeblurGAN-v2: Deblurring (Orders-of-Magnitude) Faster and Better
+
+## Simply download `Colab-DeblurGANv2.ipynb` and open it inside your Google Drive or click [here](https://colab.research.google.com/github/styler00dollar/Colab-DeblurGANv2/blob/master/Colab-DeblurGANv2.ipynb) and copy the file with "File > Save a copy to Drive..." into your Google Drive. 
 
 Code for this paper [DeblurGAN-v2: Deblurring (Orders-of-Magnitude) Faster and Better](https://arxiv.org/abs/1908.03826)
 
 Orest Kupyn, Tetiana Martyniuk, Junru Wu, Zhangyang Wang
 
 In ICCV 2019
+
+#### Important information
+
+- If you can't open `Colab-DeblurGANv2.ipynb` inside your Google Drive, try this [colab link](https://colab.research.google.com/github/styler00dollar/Colab-DeblurGANv2/blob/master/Colab-DeblurGANv2.ipynb) and save it to your Google Drive. The "open in Colab"-button can be missing in Google Drive, if that person never used Colab.
+- Google Colab does assign a random GPU. It depends on luck.
+- The Google Colab VM does have a maximum session length of 12 hours. Additionally there is a 30 minute timeout if you leave colab. The VM will be deleted after these timeouts.
 
 ## Overview
 
@@ -53,26 +61,6 @@ The datasets for training can be downloaded via the links below:
 - [DVD](https://drive.google.com/file/d/1bpj9pCcZR_6-AHb5aNnev5lILQbH8GMZ/view)
 - [GoPro](https://drive.google.com/file/d/1KStHiZn5TNm2mo3OLZLjnRvd0vVFCI0W/view)
 - [NFS](https://drive.google.com/file/d/1Ut7qbQOrsTZCUJA_mJLptRMipD8sJzjy/view)
-
-## Training
-
-#### Command
-
-```python train.py```
-
-training script will load config under config/config.yaml
-
-#### Tensorboard visualization
-
-![](./doc_images/tensorboard2.png)
-
-## Testing
-
-To test on a single image,
-
-```python predict.py IMAGE_NAME.jpg```
-
-By default, the name of the pretrained model used by Predictor is 'best_fpn.h5'. One can change it in the code ('weights_path' argument). It assumes that the fpn_inception backbone is used. If you want to try it with different backbone pretrain, please specify it also under ['model']['g_name'] in config/config.yaml.
 
 ## Pre-trained models
 
